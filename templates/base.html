@@ -14,11 +14,19 @@
         <h1><a href="/">Avodha SHOPPING CENTRE</a></h1>
       </div>
       <nav id="mainav" class="fl_right">
+
+
               <ul class="clear">
+
                 <li class="active"><a href="/">Home</a></li>
-                <li><a class="active" href="#">Register</a></li>
-                <li><a class="active" href="#">Login</a></li>
-                <li><a class="active" href="#">Logout</a></li>
+                {% if user.is_authenticated %}
+                    <li>Hello {{user.username}}</li>
+                    <li><a href="accounts/logout">Logout</a></li>
+                {% else %}
+                     <li><a href="accounts/register">Register</a></li>
+                     <li><a href="accounts/login">Login</a></li>
+                {% endif %}
+
                 <li><a class="active" href="{% url 'cartDetails' %}"><i class="fa fa-shopping-cart" style="font-size:30px"></i>{{itc}}</a></li>
 
               </ul>
