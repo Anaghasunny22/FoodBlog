@@ -29,7 +29,7 @@ def home(request, c_slug=None):
 
 def prodDetails(request, c_slug, product_slug):
     try:
-        prod = products.objects.get(category_slug=c_slug, slug=product_slug)
+        prod = products.objects.get(category__slug=c_slug, slug=product_slug)
     except Exception as e:
         raise e
     return render(request, 'item.html', {'pr': prod})
