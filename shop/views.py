@@ -9,7 +9,7 @@ from django.core.paginator import Paginator, EmptyPage, InvalidPage
 def home(request, c_slug=None):
     c_page = None
     prodt = None
-    if c_slug != None:
+    if c_slug is not None:
         c_page = get_object_or_404(categ, slug=c_slug)
         prodt = products.objects.filter(category=c_page, available=True)
     else:

@@ -23,7 +23,7 @@ input[type=text], input[type=password], textarea {
   background: #f1f1f1;
 }
 input[type=text]:focus, input[type=password]:focus {
-  background-color: orange;
+  background-color: black;
   outline: none;
 }
  div {
@@ -46,28 +46,26 @@ hr {
 .registerbtn:hover {
   opacity: 1;
 }
+.container .btn:hover {
+  background-color: black;
+  color: white;
+}
 </style>
 </head>
 <body>
-<!--<form action="login" method="post">-->
-<!--   {% csrf_token %}-->
-<!--  <div class="container">-->
-<!--  <center>  <h1> Login </h1> </center>-->
-<!--  <hr>-->
-<!--  <label> Username </label>-->
-<!--    <input type="text" name="username" placeholder= "Username" size="15" >-->
-<!--  <label><b>Password</b></label>-->
-<!--    <input type="password" placeholder="Enter Password" name="psw">-->
-
-<!--    <button type="submit" >Login</button>-->
-<!--  </div>-->
-<!--</form>-->
 <form action="login" method="post">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="username"><br><br>
-    <input type="password" name="password1" placeholder="password"><br><br>
-    <input type="submit" name="login">
-</form>
+       {% csrf_token %}
+      <div class="container">
+      <center>  <h1> Login </h1> </center>
+      <hr>
+      <label> Username </label>
+        <input type="text" name="username" placeholder= "Username">
+      <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password1">
+        <button type="submit" class="btn" >Login</button>
+      </div>
+ </form>
+
 </body>
 </html>
 {% endblock %}
