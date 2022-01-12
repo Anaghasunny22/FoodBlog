@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'avodhashop.wsgi.application'
 DATABASES = {
   'default': {
       'ENGINE': 'django.db.backends.mysql',
-      'NAME': 'avodhashop',
+      'NAME': 'avodhashops',
       'USER': 'root',
       'PASSWORD': '',
       'HOST': 'localhost'
