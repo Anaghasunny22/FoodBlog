@@ -84,7 +84,8 @@ DATABASES = {
       'NAME': 'avodhashops',
       'USER': 'root',
       'PASSWORD': '',
-      'HOST': 'localhost'
+      'HOST': 'localhost',
+       'PORT': '3306',
   }
 }
 
